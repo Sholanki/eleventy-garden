@@ -1,11 +1,18 @@
 ---
-layout: default-layout.html
+layout: notes.html
 pagination:
   data: collections.notes
   size: 10
   alias: notes
 ---
 
-# Bar
-
-Drink; drink and be merry. Have an [[easter egg]], or eat some other [[food]].
+<ul>
+  {%- for post in collections.notes | reverse -%}
+    <li>
+      <h3><a href="{{ post.url | url }}">{{ post.data.title }}</a> | {{ post.date }}</h3>
+      {% if post.data.teaser %}
+        <p>{{ post.data.teaser }}</p>
+      {% endif %} 
+    </li>
+  {%- endfor -%}
+</ul>
