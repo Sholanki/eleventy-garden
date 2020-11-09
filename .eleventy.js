@@ -29,7 +29,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.setLibrary('md', md);
     
     eleventyConfig.addCollection("notes", function (collection) {
-        return collection.getFilteredByGlob("notes/*.md");
+        return collection.getFilteredByGlob(["*.md", "index.md"]);
     });
     
     eleventyConfig.addPassthroughCopy('assets');
