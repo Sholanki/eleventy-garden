@@ -4,7 +4,7 @@ layout: default
 <article>
      {% for notes in collections.notes %}
     <h2><a href="{{ note.url | url }}">{{ notes.data.pageTitle }}</a></h2>
-    <em>{{ note.date | date: "%Y-%m-%d" }}</em>
+    <em>{{ notes.date | date: "%Y-%m-%d" }}</em>
 	{% endfor %}
 </article>
 {% include backlinks.html %}
