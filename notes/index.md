@@ -1,5 +1,7 @@
 ---
 title: About these notes
 ---
-# About these Notes
-These are some fake notes. Feel free to poke around. You may spot an [[easter egg]]  or two! Also, I like [[food]].
+{% for notes in collections.notes %}
+    <h2><a href="{{ notes.url | url }}">{{ notes.data.pageTitle }}</a></h2>
+    <em>{{ notes.date | date: "%Y-%m-%d" }}</em>
+	{% endfor %}

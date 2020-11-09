@@ -2,9 +2,6 @@
 layout: default
 ---
 <article>
-     {% for notes in collections.notes %}
-    <h2><a href="{{ note.url | url }}">{{ notes.data.pageTitle }}</a></h2>
-    <em>{{ notes.date | date: "%Y-%m-%d" }}</em>
-	{% endfor %}
+    {{content}}
 </article>
 {% include backlinks.html %}
