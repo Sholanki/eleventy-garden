@@ -6,13 +6,6 @@ pagination:
   alias: notes
 ---
 
-<ul>
-  {%- for post in collections.notes | reverse -%}
-    <li>
-      <h3><a href="{{ post.url | url }}">{{ post.data.title }}</a> | {{ post.date }}</h3>
-      {% if post.data.teaser %}
-        <p>{{ post.data.teaser }}</p>
-      {% endif %} 
-    </li>
-  {%- endfor -%}
-</ul>
+# Bar
+
+Drink; drink and be merry. Have an [[easter egg]], or eat some other [[food]].
