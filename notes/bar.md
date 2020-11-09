@@ -1,5 +1,5 @@
 ---
-layout: default-layout.njk 
+layout: default-layout.html 
 tags: ['notes']
 title: Bar
 date: 2020-02-01
